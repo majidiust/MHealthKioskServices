@@ -17,6 +17,8 @@ namespace MKioskService
             {
                 DatabaseDataContext db = new DatabaseDataContext();
                 VisitDescribtion newVisit = new VisitDescribtion();
+                Random random = new Random();
+                int generatedCode = random.Next(10000, 100000);
                 newVisit.Confirmed = false;
                 newVisit.KioskSerial = DeviceInfo;
                 newVisit.MobileNumber = MobileNumber;
@@ -26,6 +28,7 @@ namespace MKioskService
                 newVisit.SPO2 = SPO2Percentage;
                 newVisit.RR = SPO2PulseRate;
                 newVisit.SendSMS = false;
+                newVisit.GeneratedCode = generatedCode.ToString();
                 db.VisitDescribtions.InsertOnSubmit(newVisit);
                 db.SubmitChanges();
 
@@ -33,6 +36,7 @@ namespace MKioskService
                 var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://5.200.78.14:80/api/v1/kiosk_services");
                 httpWebRequest.ContentType = "text/json";
                 httpWebRequest.Method = "POST";
+
 
                 using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
                 {
