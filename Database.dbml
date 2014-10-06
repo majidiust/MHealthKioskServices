@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MHealthKiosk" Class="DatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=MSA;Initial Catalog=MHealthKiosk;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="MHealthKioskConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.VisitDescribtion" Member="VisitDescribtions">
+    <Type Name="VisitDescribtion">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NationalityCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MobileNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NIBPSystol" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NIBPDiastol" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SPO2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Confirmed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GeneratedCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ConfirmedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VisitDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="KioskSerial" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SendSMS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ErrorLog" Member="ErrorLogs">
+    <Type Name="ErrorLog">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ErrorMessage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NationalityCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ErrorDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
