@@ -19,3 +19,24 @@ c:\users\majid\documents\visual studio 2010\Projects\MKioskService\MKioskService
 c:\users\majid\documents\visual studio 2010\Projects\MKioskService\MKioskService\bin\System.Web.Services.dll
 c:\users\majid\documents\visual studio 2010\Projects\MKioskService\MKioskService\bin\System.Xml.dll
 c:\users\majid\documents\visual studio 2010\Projects\MKioskService\MKioskService\bin\System.Xml.Linq.dll
+D:\Projects\rayanhiva\MHealthKioskServices\bin\MKioskService.dll
+D:\Projects\rayanhiva\MHealthKioskServices\bin\MKioskService.pdb
+D:\Projects\rayanhiva\MHealthKioskServices\bin\System.Configuration.dll
+D:\Projects\rayanhiva\MHealthKioskServices\bin\System.Data.dll
+D:\Projects\rayanhiva\MHealthKioskServices\bin\System.Data.Linq.dll
+D:\Projects\rayanhiva\MHealthKioskServices\bin\System.dll
+D:\Projects\rayanhiva\MHealthKioskServices\bin\System.Drawing.dll
+D:\Projects\rayanhiva\MHealthKioskServices\bin\System.EnterpriseServices.dll
+D:\Projects\rayanhiva\MHealthKioskServices\bin\System.Runtime.Serialization.dll
+D:\Projects\rayanhiva\MHealthKioskServices\bin\System.ServiceModel.dll
+D:\Projects\rayanhiva\MHealthKioskServices\bin\System.ServiceModel.Web.dll
+D:\Projects\rayanhiva\MHealthKioskServices\bin\System.Web.ApplicationServices.dll
+D:\Projects\rayanhiva\MHealthKioskServices\bin\System.Web.dll
+D:\Projects\rayanhiva\MHealthKioskServices\bin\System.Web.DynamicData.dll
+D:\Projects\rayanhiva\MHealthKioskServices\bin\System.Web.Entity.dll
+D:\Projects\rayanhiva\MHealthKioskServices\bin\System.Web.Extensions.dll
+D:\Projects\rayanhiva\MHealthKioskServices\bin\System.Web.Services.dll
+D:\Projects\rayanhiva\MHealthKioskServices\bin\System.Xml.dll
+D:\Projects\rayanhiva\MHealthKioskServices\bin\System.Xml.Linq.dll
+D:\Projects\rayanhiva\MHealthKioskServices\obj\Debug\MKioskService.dll
+D:\Projects\rayanhiva\MHealthKioskServices\obj\Debug\MKioskService.pdb

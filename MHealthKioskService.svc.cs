@@ -36,7 +36,7 @@ namespace MKioskService
 
                 using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
                 {
-                    string json = "{\"phone\":\"" + MobileNumber + "\"," +
+                    string json = "{\"mobile\":\"" + MobileNumber + "\"," +
                                   "\"nibp_sys\":\"" + Systolic + "\"," + 
                                   "\"nibp_dia\":\"" + Diastolic + "\"," +
                                   "\"spo2\":\"" + SPO2Percentage + "\","  +
