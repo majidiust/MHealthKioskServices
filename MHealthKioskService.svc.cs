@@ -33,7 +33,7 @@ namespace MKioskService
                 db.VisitDescribtions.InsertOnSubmit(newVisit);
                 db.SubmitChanges();
 
-                string json = "data = {\"mobile\":\"" + MobileNumber + "\"," +
+                string json = "{\"mobile\":\"" + MobileNumber + "\"," +
                                   "\"nibp_sys\":\"" + Systolic + "\"," +
                                   "\"nibp_dia\":\"" + Diastolic + "\"," +
                                   "\"spo2\":\"" + SPO2Percentage + "\"," +
