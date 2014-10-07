@@ -56,9 +56,10 @@ namespace MKioskService
                     using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                     {
                         var result = streamReader.ReadToEnd();
+
+                        return result;
                     }
 
-                    return json;
                 }
             }
             catch (Exception ex)
