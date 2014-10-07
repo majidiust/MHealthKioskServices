@@ -39,7 +39,7 @@ namespace MKioskService
                                   "\"spo2\":\"" + SPO2Percentage + "\"," +
                                   "\"heart_rate\":\"" + SPO2PulseRate + "\"," +
                                   "\"national_id\":\"" + NationalID + "\"," +
-                                  "\"device_id\":\"" + DeviceInfo + "\"," + "}";
+                                  "\"device_id\":\"" + DeviceInfo + "\"" + "}";
 
                 using (var wb = new WebClient())
                 {
