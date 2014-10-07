@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.Text;
 using System.Net;
 using System.IO;
+using System.Collections.Specialized;
 namespace MKioskService
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "MHealthKioskService" in code, svc and config file together.
@@ -32,35 +33,23 @@ namespace MKioskService
                 db.VisitDescribtions.InsertOnSubmit(newVisit);
                 db.SubmitChanges();
 
-                //TODO : Send to health-cloud.ir server via json
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://5.200.78.14:80/api/v1/kiosk_services");
-                httpWebRequest.ContentType = "text/json";
-                httpWebRequest.Method = "POST";
-
-
-                using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
-                {
-                    string json = "data = {\"mobile\":\"" + MobileNumber + "\"," +
-                                  "\"nibp_sys\":\"" + Systolic + "\"," + 
+                string json = "data = {\"mobile\":\"" + MobileNumber + "\"," +
+                                  "\"nibp_sys\":\"" + Systolic + "\"," +
                                   "\"nibp_dia\":\"" + Diastolic + "\"," +
-                                  "\"spo2\":\"" + SPO2Percentage + "\","  +
+                                  "\"spo2\":\"" + SPO2Percentage + "\"," +
                                   "\"heart_rate\":\"" + SPO2PulseRate + "\"," +
                                   "\"national_id\":\"" + NationalID + "\"," +
                                   "\"device_id\":\"" + DeviceInfo + "\"," + "}";
 
-                    streamWriter.Write(json);
-                    streamWriter.Flush();
-                    streamWriter.Close();
-
-                    var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-                    using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                    {
-                        var result = streamReader.ReadToEnd();
-
-                        return result;
-                    }
-
+                using (var wb = new WebClient())
+                {
+                    var data = new NameValueCollection();
+                    data["data"] = json;
+                    var response = wb.UploadValues("http://5.200.78.14:80/api/v1/kiosk_services", "POST", data);
+                    return response.ToString();
                 }
+
+               
             }
             catch (Exception ex)
             {
